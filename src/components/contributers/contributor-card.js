@@ -5,7 +5,7 @@ import ButtonList from './link-buttons'
 function ContributerCard(props){
     return (
         <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
+        <Card.Img variant="top" src={props.pfp} />
         <Card.Body>
             <Card.Title>{props.name}</Card.Title>
             <Card.Text>

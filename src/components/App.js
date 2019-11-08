@@ -12,13 +12,15 @@ class App extends React.Component {
             contributers: [
                 {
                     name:"Lauren Harlow",
+                    profileImg:"https://miro.medium.com/fit/c/256/256/2*Pa8yKARuzP-vki1qOXakLg.jpeg",
                     description: "Lorem Ipsum and then some more",
-                    links:{twitter: "https://twitter.com/lm_harlow", medium:"https://medium.com/@laurenmarie_1833", linkedin:""}
+                    links:{twitter: "https://twitter.com/lm_harlow", medium:"https://medium.com/@laurenmarie_1833", linkedin:"https://www.linkedin.com/in/lauren-harlow-838579155/"}
                 },
                 {
                     name:"David Tippett",
+                    profileImg:"https://miro.medium.com/fit/c/256/256/2*Z62KFiLwUfsQbat-qyT09A.png",
                     description: "Lorem Ipsum and then some more",
-                    links:{twitter: "https://twitter.com/dtaivpp", medium:"https://medium.com/@dtaivpp", linkedin:""}
+                    links:{twitter: "https://twitter.com/dtaivpp", medium:"https://medium.com/@dtaivpp", linkedin:"https://www.linkedin.com/in/david-tippett/"}
                 }
             ],
             audioFiles:[],
