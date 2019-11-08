@@ -3,15 +3,37 @@ import logo from '../assets/images/logo.svg';
 import './App.css';
 import { Navbar, Nav } from 'react-bootstrap'
 
-function App() {
+import Contributers from './contributers'
+
+class App extends React.Component {
+    constructor(){
+        super()
+        this.state = {
+            contributers: [
+                {
+                    name:"Lauren Harlow",
+                    description: "Lorem Ipsum and then some more",
+                    links:{twitter: "https://twitter.com/lm_harlow", medium:"https://medium.com/@laurenmarie_1833", linkedin:""}
+                },
+                {
+                    name:"David Tippett",
+                    description: "Lorem Ipsum and then some more",
+                    links:{twitter: "https://twitter.com/dtaivpp", medium:"https://medium.com/@dtaivpp", linkedin:""}
+                }
+            ],
+            audioFiles:[],
+            tags:[]
+        }
+    }
+    render(){
     return (
         <>
             <div>
                 <Navbar bg="light" variant="light">
-                    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+                    <Navbar.Brand href="#about">Navbar</Navbar.Brand>
                     <Nav className="mr-auto">
-                        <Nav.Link href="#home">About Us</Nav.Link>
-                        <Nav.Link href="#features">Browse</Nav.Link>
+                        <Nav.Link href="#about">About Us</Nav.Link>
+                        <Nav.Link href="#browse">Browse</Nav.Link>
                     </Nav>
                 </Navbar>
             </div>
@@ -31,8 +53,12 @@ function App() {
                     </a>
                 </header>
             </div>
+            <div>
+                <Contributers contributers={this.state.contributers} />
+            </div>
         </>
-    );
+        );
+    }
 }
 
 export default App;
