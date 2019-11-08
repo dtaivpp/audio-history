@@ -8,7 +8,7 @@ function ButtonList(props){
             <Button 
                 variant="outline-secondary" 
                 href={props.links.twitter}>
-                    <Image src="holder.js/171x180" rounded />
+                    <Image src="../../assets/images/Rounded_Twitter_Small.svg" rounded />
             </Button>
         );
     }
@@ -18,7 +18,7 @@ function ButtonList(props){
             <Button 
                 variant="outline-secondary" 
                 href={props.links.medium}>
-                    <Image src="holder.js/171x180" rounded />
+                    <Image src="../../assets/images/Rounded_Medium_Small.svg" rounded />
             </Button>
         );
     }
@@ -28,7 +28,7 @@ function ButtonList(props){
             <Button 
                 variant="outline-secondary" 
                 href={props.links.linkedin}>
-                    <Image src="holder.js/171x180" rounded />
+                    <Image src="../../assets/images/Rounded_Linkedin_Small.svg" rounded />
             </Button>
         );
     }
