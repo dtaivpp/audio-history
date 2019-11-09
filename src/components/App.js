@@ -4,6 +4,7 @@ import './App.css';
 import { Navbar, Nav } from 'react-bootstrap'
 
 import Contributers from './contributers'
+import Browse from './browse'
 
 class App extends React.Component {
     constructor(){
@@ -23,7 +24,19 @@ class App extends React.Component {
                     links:{twitter: "https://twitter.com/dtaivpp", medium:"https://medium.com/@dtaivpp", linkedin:"https://www.linkedin.com/in/david-tippett/"}
                 }
             ],
-            audioFiles:[],
+            audioFiles:[
+                {
+                    name:"SampleInterview",
+                    featureImg:"https://thecareforum.co.uk/wp-content/uploads/2017/03/Old-Person-Thumbs-Up.jpg",
+                    tags:[
+                        "Tag1",
+                        "Tag2",
+                        "Tag3"
+                    ],
+                    description:"This is my description",
+                    src:"https://s3.bucket.location"
+                }
+            ],
             tags:[]
         }
     }
@@ -56,6 +69,7 @@ class App extends React.Component {
                 </header>
             </div>
             <div>
+                <Browse audioFiles={this.state.audioFiles}/>
                 <Contributers contributers={this.state.contributers} />
             </div>
         </>

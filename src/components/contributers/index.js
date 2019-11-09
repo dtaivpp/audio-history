@@ -9,7 +9,8 @@ class Contributers extends React.Component {
                 name={contributer.name} 
                 description={contributer.description} 
                 links={contributer.links} 
-                pfp={contributer.profileImg}/>
+                pfp={contributer.profileImg}
+            />
         );  
         return(
             <>
