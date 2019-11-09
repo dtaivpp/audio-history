@@ -2,9 +2,10 @@ import React from 'react';
 import logo from '../assets/images/logo.svg';
 import './App.css';
 import { Navbar, Nav } from 'react-bootstrap'
+import { Container, Row } from 'react-bootstrap'
 
 import Contributers from './contributers'
-import Browse from './browse'
+import Browse from './stories'
 
 class App extends React.Component {
     constructor(){
@@ -35,6 +36,17 @@ class App extends React.Component {
                     ],
                     description:"This is my description",
                     src:"https://s3.bucket.location"
+                },
+                {
+                    name:"SampleInterview",
+                    featureImg:"https://ieltsintaiwan.files.wordpress.com/2015/09/oldchinesewoman.jpg?w=584",
+                    tags:[
+                        "WW2",
+                        "WW3",
+                        "Cival War"
+                    ],
+                    description:"This is my other desc",
+                    src:"https://s3.bucket.location"
                 }
             ],
             tags:[]
@@ -45,32 +57,24 @@ class App extends React.Component {
         <>
             <div>
                 <Navbar bg="light" variant="light">
-                    <Navbar.Brand href="#about">Navbar</Navbar.Brand>
+                    <Navbar.Brand href="#about">AudioHistory</Navbar.Brand>
                     <Nav className="mr-auto">
                         <Nav.Link href="#about">About Us</Nav.Link>
                         <Nav.Link href="#browse">Browse</Nav.Link>
                     </Nav>
                 </Navbar>
             </div>
-            <div className="App">
+{/*             <div className="App">
                 <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <p>
-                        Edit <code>src/App.js</code> and save to reload.
-                    </p>
-                    <a
-                        className="App-link"
-                        href="https://reactjs.org"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Learn React
-                    </a>
                 </header>
-            </div>
+            </div> */}
             <div>
-                <Browse audioFiles={this.state.audioFiles}/>
-                <Contributers contributers={this.state.contributers} />
+                <Container >
+                    <Row className="justify-content-md-center">
+                        <Browse audioFiles={this.state.audioFiles}/>
+                        <Contributers contributers={this.state.contributers} />
+                    </Row>
+                </Container>
             </div>
         </>
         );
