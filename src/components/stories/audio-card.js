@@ -8,7 +8,7 @@ function AudioCard(props){
             paddingBottom: '10px'
         }}>
             <Card style={{ 
-                width: '18rem', 
+                width: '18rem',
                 margin: 'auto',  
                 }}>
                 <a href={props.src}>

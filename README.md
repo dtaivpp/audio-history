@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Time Spent
 
-5 Hours
+7 Hours
 
 ## Available Scripts
 

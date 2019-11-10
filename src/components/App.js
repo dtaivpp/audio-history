@@ -4,8 +4,16 @@ import './App.css';
 import { Navbar, Nav } from 'react-bootstrap'
 import { Container, Row } from 'react-bootstrap'
 
+// Pages 
 import Contributers from './contributers'
 import Browse from './stories'
+
+import {
+    HashRouter as Router,
+    Switch,
+    Route,
+    Redirect
+  } from "react-router-dom";
 
 class App extends React.Component {
     constructor(){
@@ -54,7 +62,7 @@ class App extends React.Component {
     }
     render(){
     return (
-        <>
+        <Router>
             <div>
                 <Navbar bg="light" variant="light">
                     <Navbar.Brand href="#about">AudioHistory</Navbar.Brand>
@@ -64,19 +72,26 @@ class App extends React.Component {
                     </Nav>
                 </Navbar>
             </div>
-{/*             <div className="App">
-                <header className="App-header">
-                </header>
-            </div> */}
             <div>
                 <Container >
                     <Row className="justify-content-md-center">
-                        <Browse audioFiles={this.state.audioFiles}/>
-                        <Contributers contributers={this.state.contributers} />
+                        <Switch>
+                            <Route exact path='/'>
+                                <Redirect to="/browse" />
+                            </Route>
+
+                            <Route path="/browse">
+                                <Browse audioFiles={this.state.audioFiles}/>
+                            </Route>
+                            
+                            <Route path="/about"> 
+                                <Contributers contributers={this.state.contributers} />
+                            </Route>
+                        </Switch>
                     </Row>
                 </Container>
             </div>
-        </>
+        </Router>
         );
     }
 }

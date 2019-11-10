@@ -1,7 +1,6 @@
 import React from 'react';
 import AudioCard from './audio-card';
 
-
 class Browse extends React.Component {
     render() {
         let audioCards = this.props.audioFiles.map((interview) => 
