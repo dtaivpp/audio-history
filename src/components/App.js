@@ -91,7 +91,7 @@ class App extends React.Component {
         <Router>
             <div>
                 <Navbar bg="light" variant="light">
-                    <Navbar.Brand href="#about">AudioHistory</Navbar.Brand>
+                    <Navbar.Brand href="#stories">AudioHistory</Navbar.Brand>
                     <Nav className="mr-auto">
                         <Nav.Link href="#contributers">Contributers</Nav.Link>
                         <Nav.Link href="#stories">Stories</Nav.Link>
