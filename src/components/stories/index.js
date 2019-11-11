@@ -1,7 +1,7 @@
 import React from 'react';
 import AudioCard from './audio-card';
 
-class Browse extends React.Component {
+class Stories extends React.Component {
     render() {
         let audioCards = this.props.audioFiles.map((interview) => 
             <AudioCard 
@@ -20,5 +20,5 @@ class Browse extends React.Component {
     }
 }
 
-export default Browse;
+export default Stories;
  

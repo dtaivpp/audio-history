@@ -1,12 +1,11 @@
 import React from 'react';
-import logo from '../assets/images/logo.svg';
 import './App.css';
 import { Navbar, Nav } from 'react-bootstrap'
 import { Container, Row } from 'react-bootstrap'
 
 // Pages 
 import Contributers from './contributers'
-import Browse from './stories'
+import Stories from './stories'
 
 import {
     HashRouter as Router,
@@ -41,23 +40,44 @@ class App extends React.Component {
             ],
             audioFiles:[
                 {
-                    name:"SampleInterview",
+                    name:"John Smith Interview",
                     featureImg:"https://thecareforum.co.uk/wp-content/uploads/2017/03/Old-Person-Thumbs-Up.jpg",
                     tags:[
-                        "Tag1",
-                        "Tag2",
-                        "Tag3"
+                        "Coal Mines",
+                        "Working",
+                        "Family Life"
                     ],
                     description:"This is my description",
                     src:"https://s3.bucket.location"
                 },
                 {
-                    name:"SampleInterview",
-                    featureImg:"https://ieltsintaiwan.files.wordpress.com/2015/09/oldchinesewoman.jpg?w=584",
+                    name:"Alice Stevens Interview",
+                    featureImg:"https://images.pexels.com/photos/432722/pexels-photo-432722.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
                     tags:[
                         "WW2",
-                        "WW3",
-                        "Cival War"
+                        "Civil War"
+                    ],
+                    description:"This is my other desc",
+                    src:"https://s3.bucket.location"
+                },
+                {
+                    name:"Bernadette Interview",
+                    featureImg:"https://images.pexels.com/photos/3037985/pexels-photo-3037985.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+                    tags:[
+                        "International Life",
+                        "Pidgeons",
+                        "Handicapped Living"
+                    ],
+                    description:"This is my other desc",
+                    src:"https://s3.bucket.location"
+                },
+                {
+                    name:"Rusty Afanso Interview",
+                    featureImg:"https://images.pexels.com/photos/2598027/pexels-photo-2598027.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+                    tags:[
+                        "International Life",
+                        "Middle East",
+                        "Soldier"
                     ],
                     description:"This is my other desc",
                     src:"https://s3.bucket.location"
@@ -73,8 +93,8 @@ class App extends React.Component {
                 <Navbar bg="light" variant="light">
                     <Navbar.Brand href="#about">AudioHistory</Navbar.Brand>
                     <Nav className="mr-auto">
-                        <Nav.Link href="#about">About Us</Nav.Link>
-                        <Nav.Link href="#browse">Browse</Nav.Link>
+                        <Nav.Link href="#contributers">Contributers</Nav.Link>
+                        <Nav.Link href="#stories">Stories</Nav.Link>
                     </Nav>
                 </Navbar>
             </div>
@@ -83,14 +103,14 @@ class App extends React.Component {
                     <Row className="justify-content-md-center">
                         <Switch>
                             <Route exact path='/'>
-                                <Redirect to="/browse" />
+                                <Redirect to="/stories" />
                             </Route>
 
-                            <Route path="/browse">
-                                <Browse audioFiles={this.state.audioFiles}/>
+                            <Route path="/stories">
+                                <Stories audioFiles={this.state.audioFiles}/>
                             </Route>
 
-                            <Route path="/about"> 
+                            <Route path="/contributers"> 
                                 <Contributers contributers={this.state.contributers} />
                             </Route>
                         </Switch>

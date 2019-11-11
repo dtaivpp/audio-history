@@ -5,12 +5,13 @@ import { Col } from 'react-bootstrap'
 
 function ContributerCard(props){
     return (
-        <Col xs style={{
-            paddingTop: '10px',
-            paddingBottom: '10px'
+        <Col md style={{
+            marginTop: "10px",
+            marginBottom: "10px"
         }}>
             <Card style={{ 
-                width: '18rem', 
+                width: '18rem',
+                height: '100%', 
                 margin:'auto'
                 }}>
             <Card.Img variant="top" src={props.pfp} />
@@ -25,7 +26,6 @@ function ContributerCard(props){
         </Col>
     );
 }
-
 
 
 export default ContributerCard;
